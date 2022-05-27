@@ -40,7 +40,7 @@ class Solution {
 		long ans = 0;
 		for (int i = 0; i < n; i++) {
 
-			ans += ((prePrefix[right[i] + 1] - prePrefix[i + 1]) * (i - left[i]) % MOD + MOD - (prePrefix[i + 1] - prePrefix[left[i] + 1]) * (right[i] - i) % MOD) * strength[i];
+			ans += ((prePrefix[right[i] + 1] - prePrefix[i + 1]) * (i - left[i]) % MOD + MOD*2 - (prePrefix[i + 1] - prePrefix[left[i] + 1]) * (right[i] - i) % MOD) * strength[i];
 			ans %= MOD;
 
 		}
